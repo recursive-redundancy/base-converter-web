@@ -21,9 +21,10 @@ npm scripts in package.json and can be ran by entering a simple command:
 npm start
 ```
 
-# Build for Deployment
-Application also uses Webpack to build for deployment. Deploy build differs in that it minifies JS & CSS files and is a one-time process rather than a watching for changes live. Run deploy build by 
-entering this command:
+# Build for Production
+Application also uses Webpack to build for production build. Production build 
+differs in that it minifies JS & CSS files and is a one-time process rather 
+than a watching for changes live. Build by entering this command:
 ```
 npm run build
 ```
