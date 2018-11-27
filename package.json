@@ -40,6 +40,6 @@
     "predev": "rimraf dist",
     "dev": "webpack --watch --config webpack.dev.babel.js",
     "http": "live-server ./dist",
-    "start": "parallel dev http",
+    "start": "parallel dev http"
   }
 }
