@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Base Convert | by Daniel Morgan</title>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=yes">
+  <meta name="author" content="Daniel Morgan">
+  <meta name="designer" content="Daniel Morgan">
+  <meta name="publisher" content="Daniel Morgan">
+  <meta name="title" content="Base Converter by Daniel Morgan">
+  <meta name="copyright" content="Copyright 2018">
+  <meta name="Description" content="Convert values between decimal, binary, octal and hexadecimal number systems">
+  <meta name="keywords" content="binary, octal, hexadecimal, decimal, base, base converter, conversion, converter, number converter, binary conversion, hex conversion, octal conversion, decimal conversion, hexadecimal conversion, binary converter, decimal converter, hex converter, hexadecimal converter, octal converter">
+  <meta charset="utf-8">
+  <meta name="language" content="english">
+  <meta name=”robots” content=”index,nofollow”>
+  <!-- <link rel="icon" type="image/png" href="/img/favicon.png"> -->
+</head>
+<body>
+  <div id="root">
+    
+  <div id="alert">
+    <div id="alert-message"></div>
+  </div>
+
+  <div class="table">
+
+    <div id="header" class="row">
+      <h1 class="cell">Base Converter</h1>
+    </div>
+
+    <div class="row label">
+      <div class="cell label">
+        <h2 id="input-label">Input</h2>
+      </div>
+    </div>
+    <div class="row text">
+      <div class="cell in-out">
+        <div class="wrap-text">
+          <textarea id="txt-input" class="txt-base">0</textarea>
+        </div>
+      </div>
+    </div>
+
+    <div id="area-select" class="row">
+      <div class="cell">
+        <div class="table select">
+          <div class="row labels">
+            <div class="cell">
+                <h2>From Base</h2>
+            </div>
+            <div class="cell">
+                <h2>To Base</h2>
+            </div>
+            <div class="cell">
+            </div>
+          </div>
+          <div class="row controls">
+            <div class="cell">
+              <select id="sel-from">
+                <option value="bin" selected>Binary</option>
+                <option value="oct">Octal</option>
+                <option value="dec">Decimal</option>
+                <option value="hex">Hex</option>
+              </select>
+            </div>
+            <div class="cell">
+              <select id="sel-to">
+                  <option value="bin">Binary</option>
+                  <option value="oct">Octal</option>
+                  <option value="dec" selected>Decimal</option>
+                  <option value="hex">Hex</option>
+              </select>
+            </div>
+            <div id="cell-convert" class="cell">
+              <button id="btn-convert" ontouchstart="">Convert</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row label">
+      <div class="cell label">
+        <h2>Output</h2>
+      </div>
+    </div>
+    <div class="row text">
+      <div class="cell in-out">
+        <div class="wrap-text">
+          <textarea id="txt-output" class="txt-base"></textarea>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

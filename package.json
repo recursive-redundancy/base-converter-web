@@ -1,0 +1,45 @@
+{
+  "name": "base-converter-web",
+  "version": "0.2.0",
+  "description": "Web based app front-end for base converter that takes an input and converts from a base to another base as output",
+  "main": "./src/main.js",
+  "author": "Daniel Morgan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/recursive-redundancy/base-converter-web"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jquery": "^3.3.1",
+    "live-server": "^1.2.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.10.0",
+    "npm-parallel": "^2.0.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-merge": "^4.1.4"
+  },
+  "dependencies": {
+    "dpm-base": "^0.3.1",
+    "npm": "^6.4.1"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "webpack --config webpack.prod.babel.js",
+    "predev": "rimraf dist",
+    "dev": "webpack --watch --config webpack.dev.babel.js",
+    "http": "live-server ./dist",
+    "start": "parallel dev http",
+  }
+}
