@@ -50,5 +50,7 @@ code that you’re sharing, so you can build amazing things.
 [dpm-base](https://www.npmjs.com/package/dpm-base) - My npm package which 
 contains the underlying logic and code for performing base conversions.
 
+[jquery](https://www.npmjs.com/package/jquery) - jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.
+
 # License
 [MIT](./license.txt)
