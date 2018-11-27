@@ -9,8 +9,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
-        include: /node_modules\/dpm-base/,
+        exclude: /node_modules\/(?!dpm-base$)/,
         use: {
           loader: "babel-loader",
           options: {
