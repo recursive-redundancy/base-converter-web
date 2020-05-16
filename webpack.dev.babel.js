@@ -3,8 +3,11 @@ const common = require('./webpack.common.babel.js');
 const webpack = require('webpack');
 
 module.exports = merge(common, {
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   mode: 'development',
+  devServer: {
+    contentBase: './dist'
+  },
   module: {
     rules: [
     ]
