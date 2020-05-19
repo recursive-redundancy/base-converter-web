@@ -2,7 +2,7 @@
   "name": "base-converter-web",
   "version": "0.3.0",
   "description": "Web based app front-end for base converter that takes an input and converts from a base to another base as output",
-  "main": "./src/js/main.js",
+  "main": "./src/js/index.js",
   "author": "Daniel Morgan",
   "license": "MIT",
   "repository": {

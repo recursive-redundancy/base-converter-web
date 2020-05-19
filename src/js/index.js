@@ -5,11 +5,8 @@
 * contains UI/View logic
 */
 
-// css styles
-require('./css/main.scss');
-
-const base = require('dpm-base');
-const $ = require('jquery');
+import base from 'dpm-base';
+import $ from 'jquery';
 
 
 /*
