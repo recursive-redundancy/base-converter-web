@@ -1,8 +1,8 @@
 {
   "name": "base-converter-web",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Web based app front-end for base converter that takes an input and converts from a base to another base as output",
-  "main": "./src/main.js",
+  "main": "./src/js/index.js",
   "author": "Daniel Morgan",
   "license": "MIT",
   "repository": {
@@ -10,36 +10,37 @@
     "url": "https://github.com/recursive-redundancy/base-converter-web"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0",
-    "babel-loader": "^8.0.4",
-    "css-loader": "^1.0.0",
-    "file-loader": "^2.0.0",
-    "html-webpack-plugin": "^3.2.0",
-    "live-server": "^1.2.1",
-    "mini-css-extract-plugin": "^0.4.4",
-    "node-sass": "^4.10.0",
-    "npm-parallel": "^2.0.1",
-    "optimize-css-assets-webpack-plugin": "^5.0.1",
-    "rimraf": "^2.6.2",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1",
-    "uglifyjs-webpack-plugin": "^2.0.1",
-    "webpack": "^4.23.1",
-    "webpack-cli": "^3.1.2",
-    "webpack-merge": "^4.1.4"
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.5.3",
+    "html-webpack-plugin": "^4.3.0",
+    "http-server": "^0.12.3",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "rimraf": "^3.0.2",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "dpm-base": "^0.3.1",
-    "jquery": "^3.4.1",
-    "npm": "^6.13.4"
+    "dpm-base": "^0.3.4",
+    "jquery": "^3.5.1",
+    "react-app-polyfill": "^1.0.6"
   },
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "webpack --config webpack.prod.babel.js",
+    "build": "webpack --config webpack.prod.js",
+    "prod": "npm run build && npm run http",
     "predev": "rimraf dist",
-    "dev": "webpack --watch --config webpack.dev.babel.js",
-    "http": "live-server ./dist",
-    "start": "parallel dev http"
+    "http": "http-server ./dist -p 8080",
+    "start": "webpack-dev-server --host 0.0.0.0 --config webpack.dev.js"
   }
 }
