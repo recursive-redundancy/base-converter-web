@@ -1,4 +1,10 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './views/App';
+// import './js/';
 import './index.scss';
-import './js/';
 
-console.log('ay ay ay');
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
