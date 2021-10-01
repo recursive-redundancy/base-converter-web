@@ -1,0 +1,147 @@
+.app {
+    border: solid .2em red;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+    .header {
+        border: solid .2em orange;
+        font-size: 1em;
+        padding-top: .5em;
+        padding-bottom: .5em;
+    }
+
+    .inputarea {
+        h2 {
+            color: black;
+            font-size: 1.2em;
+        }
+
+        textarea {
+            background-color: white;
+            font-size: 1em;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+      #root .row.label {
+        height: 1em;
+        position: relative;
+      }
+      
+        #root .cell.label {
+          vertical-align: bottom;
+        }
+      
+        #input-label {
+          padding-top: 0;
+        }
+    
+      .row.text {
+        height: 37%;
+        position: relative;
+      }
+  
+        .cell.in-out {
+          height: 37%;
+          position: relative;
+        }
+      
+        .wrap-text {
+          height: 100%;
+          position: relative;
+        }
+  
+      .txt-base {
+        border: solid .1em darkgray;
+        border-radius: .2em;
+        font-size: 1em;
+        height: 100%;
+        /* fallback sizing for old android browser & such */
+        min-height: 10em;
+        min-height: 30vh;
+        outline: none;
+        padding: .2em;
+        position: relative;
+        width: 100%;
+      }
+  
+  
+  #area-select {
+    height: 1em;
+  }
+  
+    #area-select h2 {
+      padding: 0;
+      padding-bottom: .2em;
+    }
+  
+    .table.select {
+      margin: auto;
+    }
+    
+      .row.labels {
+        height: 0;
+        text-align: left;
+      }
+  
+        .row.labels .cell {
+          vertical-align: bottom;
+        }
+  
+      .row.controls {
+        height: 2em;
+      }
+  
+        .row.controls .cell {
+          padding-right: .5em;
+          vertical-align: middle;
+        }
+  
+        .table.select .cell:last-of-type {
+          padding-right: none;
+          width: 4em;
+        }
+        
+        button {
+          background-color: #e4e4e4;
+          border: solid .1em darkgray;
+          border-radius: .2em;
+          font-size: 1em;
+          padding: .35em;
+          width: 4em;
+        }
+  
+        button:active {
+          background-color: #c9a3a3;
+          border: solid .1em #ffffff;
+          transform: scale(.8, .8);
+          -webkit-transform: scale(.8, .8);
+        }
+  
+        select {
+          font-size: 1em;
+          padding: .3em;
+          width: 100%;
+        }
+  
+  /*
+  * Notification section
+  * alerts user for things like invalid input, etc
+  */
+  #alert {
+    color: red;
+    display: none;
+    font-size: 2em;
+    font-weight: bold;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    bottom: 3em;
+    /* opacity: 0; */
+    width: 100%;
+    z-index: 1;
+  }
+  

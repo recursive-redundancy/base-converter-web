@@ -1,14 +1,7 @@
-import React, 
-{
-useEffect,
-useRef, 
-useState
-} from 'react';
+import React, {useEffect,useRef, useState} from 'react';
 import App from './App';
 
 const AppContainer = () => {
-  let tknFinalScore;
-
   const [isSolving, setIsSolving] = useState(false);
   const [inputExpression, setInputExpression] = useState('');
   const [solveQueueLength, setSolveQueueLength] = useState(0);
