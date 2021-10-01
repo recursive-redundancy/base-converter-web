@@ -6,102 +6,102 @@
 */
 
 import base from 'dpm-base';
-import $ from 'jquery';
+
+console.log('well, hello there');
+
+// /*
+// * Keys value set when selections are made for to and from bases
+// * and used to decide which conversion logic to apply
+// */
+// let selections = {
+//   'sel-from': 'bin',
+//   'sel-to': 'dec'
+// } 
 
 
-/*
-* Keys value set when selections are made for to and from bases
-* and used to decide which conversion logic to apply
-*/
-let selections = {
-  'sel-from': 'bin',
-  'sel-to': 'dec'
-} 
+// $(document).ready(() => {
+//   /*
+//   * Detect when base to convert from selection changed
+//   * and store the value
+//   */
+//   $('select').change((event) => {
+//     selections[event.target.id] = event.target.value;
+//   });
 
+//   /*
+//   * Convert button
+//   * Perform conversion when button clicked
+//   */
+//  $('#btn-convert').click((event) => {
+//     // the module containing the conversion logic
+//     let mod = null,
+//       // the conversion function to perform
+//       conversion = null,
+//       // the function to perform input validation
+//       validator = null;
 
-$(document).ready(() => {
-  /*
-  * Detect when base to convert from selection changed
-  * and store the value
-  */
-  $('select').change((event) => {
-    selections[event.target.id] = event.target.value;
-  });
+//     switch (selections['sel-from']) {
+//       case 'bin':
+//         mod = base.binary;
+//         break;
+//       case 'oct':
+//         mod = base.octal;
+//         break;
+//       case 'dec':
+//         mod = base.decimal;
+//         break;
+//       case 'hex':
+//         mod = base.hex;
+//         break;
+//     }
 
-  /*
-  * Convert button
-  * Perform conversion when button clicked
-  */
- $('#btn-convert').click((event) => {
-    // the module containing the conversion logic
-    let mod = null,
-      // the conversion function to perform
-      conversion = null,
-      // the function to perform input validation
-      validator = null;
+//     validator = mod.isValid;
 
-    switch (selections['sel-from']) {
-      case 'bin':
-        mod = base.binary;
-        break;
-      case 'oct':
-        mod = base.octal;
-        break;
-      case 'dec':
-        mod = base.decimal;
-        break;
-      case 'hex':
-        mod = base.hex;
-        break;
-    }
+//     switch (selections['sel-to']) {
+//       case 'bin':
+//         conversion = mod.toBin;
+//         break;
+//       case 'oct':
+//         conversion = mod.toOct;
+//         break;
+//       case 'dec':
+//         conversion = mod.toDec;
+//         break;
+//       case 'hex':
+//         conversion = mod.toHex;
+//         break;
+//     }
 
-    validator = mod.isValid;
-
-    switch (selections['sel-to']) {
-      case 'bin':
-        conversion = mod.toBin;
-        break;
-      case 'oct':
-        conversion = mod.toOct;
-        break;
-      case 'dec':
-        conversion = mod.toDec;
-        break;
-      case 'hex':
-        conversion = mod.toHex;
-        break;
-    }
-
-    doConversion(conversion, validator);
-  });
+//     doConversion(conversion, validator);
+//   });
   
-}); 
+// }); 
 
-/*
-* Function performs whatever base conversion 
-* (and respective input validation) has been selected by user
-* arg1 is reference to a conversion function
-* arg2 is reference to a input validation function
-*/
-function doConversion(conversion, validator) {
-  let val = $('#txt-input').val();
-  $('#txt-output').val('');
+// /*
+// * Function performs whatever base conversion 
+// * (and respective input validation) has been selected by user
+// * arg1 is reference to a conversion function
+// * arg2 is reference to a input validation function
+// */
+// function doConversion(conversion, validator) {
+//   let val = $('#txt-input').val();
+//   $('#txt-output').val('');
 
-  // perform form validation
-  if (!validator(val)) {
-    $('#alert-message').text('Invalid Input!');
-    $('#alert').stop(false, true).fadeIn(0).fadeOut(1500);
-    return;
-  }
+//   // perform form validation
+//   if (!validator(val)) {
+//     $('#alert-message').text('Invalid Input!');
+//     $('#alert').stop(false, true).fadeIn(0).fadeOut(1500);
+//     return;
+//   }
 
-  $('#alert-message').text('Converting...');
-  $('#alert').stop(false, true).fadeIn(0);
+//   $('#alert-message').text('Converting...');
+//   $('#alert').stop(false, true).fadeIn(0);
 
-    // setTimeout for conversion call
-    // so DOM updates
-    window.setTimeout(() => {
-      $('#txt-output').val(conversion(val));
-      $('#alert').stop(false, true).fadeOut(250);
-    }, 150);
+//     // setTimeout for conversion call
+//     // so DOM updates
+//     window.setTimeout(() => {
+//       $('#txt-output').val(conversion(val));
+//       $('#alert').stop(false, true).fadeOut(250);
+//     }, 150);
 
-}
+// }

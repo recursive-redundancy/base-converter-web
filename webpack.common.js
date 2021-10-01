@@ -2,10 +2,10 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: path.resolve(`${__dirname}/src`, 'index.js'),
+  entry: './src/index.js',
+  // target: ['web', 'es5'],
   output: {
-    filename: '[name].[hash].js',
-    chunkFilename: '[name].[chunkhash].js',
+    filename: './js/[name].[hash].js',
     path: path.resolve(__dirname, 'dist'),
   },
   optimization: {
@@ -16,22 +16,47 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /node_modules\/(?!dpm-base$)/,
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
             presets: [
               [
                 "@babel/preset-env",
                 {
                   "targets": {
-                    "ie": "9"
+                    "browsers": [
+                      "> 0.5%",
+                      "not dead",
+                      "ie >= 9"
+                    ]
                   }
                 }
-              ]
+              ],
+              "@babel/preset-react"
+            ],
+            plugins: [
+              "@babel/plugin-proposal-private-methods",
+              "@babel/plugin-proposal-class-properties"
             ]
           }
+        }
+      },
+      {
+        test: /\.(jpg|png)$/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "./images/[name].[hash].[ext]",
+          }
+        }
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader',
+        options: {
+          name: "./images/[name].[hash].[ext]",
         }
       }
     ]
@@ -39,7 +64,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: path.resolve(`${__dirname}/public`, 'index.html')
+      template: './public/index.html'
     })
   ]
 };

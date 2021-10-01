@@ -1,8 +1,8 @@
 {
   "name": "base-converter-web",
-  "version": "0.3.0",
+  "version": "2.0.0",
   "description": "Web based app front-end for base converter that takes an input and converts from a base to another base as output",
-  "main": "./src/js/index.js",
+  "main": "./src/index.js",
   "author": "Daniel Morgan",
   "license": "MIT",
   "repository": {
@@ -10,30 +10,39 @@
     "url": "https://github.com/recursive-redundancy/base-converter-web"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
-    "@babel/preset-react": "^7.9.4",
-    "babel-loader": "^8.1.0",
-    "css-loader": "^3.5.3",
-    "html-webpack-plugin": "^4.3.0",
-    "http-server": "^0.12.3",
-    "mini-css-extract-plugin": "^0.9.0",
-    "node-sass": "^4.14.1",
-    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.5",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-proposal-private-methods": "^7.14.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.27.5",
+    "concurrently": "^6.2.1",
+    "css-loader": "^6.3.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.3.0",
+    "node-sass": "^6.0.1",
+    "onchange": "^7.1.0",
     "rimraf": "^3.0.2",
-    "sass-loader": "^8.0.2",
-    "style-loader": "^1.2.1",
-    "uglifyjs-webpack-plugin": "^2.2.0",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^4.2.2"
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.3.0",
+    "svg-inline-loader": "^0.8.2",
+    "terser-webpack-plugin": "^5.2.4",
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.2.1",
+    "webpack-merge": "^5.8.0"
   },
   "dependencies": {
     "dpm-base": "^0.3.4",
-    "jquery": "^3.5.1",
-    "react-app-polyfill": "^1.0.6"
+    "query-string": "^7.0.1",
+    "react": "^17.0.2",
+    "react-app-polyfill": "^2.0.0",
+    "react-dom": "^17.0.2",
+    "react-inlinesvg": "^2.3.0",
+    "react-router-dom": "^5.3.0"
   },
   "scripts": {
     "prebuild": "rimraf dist",
@@ -41,6 +50,6 @@
     "prod": "npm run build && npm run http",
     "predev": "rimraf dist",
     "http": "http-server ./dist -p 8080",
-    "start": "webpack-dev-server --host 0.0.0.0 --config webpack.dev.js"
+    "start": "webpack-dev-server --config webpack.dev.js"
   }
 }
