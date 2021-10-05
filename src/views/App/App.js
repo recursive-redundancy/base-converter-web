@@ -1,26 +1,27 @@
 import React from 'react';
-// import BaseSelect from '../../components/BaseSelect';
+import BaseSelect from '../../components/BaseSelect';
 import Button from '../../components/Button';
+import Titlebar from '../../components/Titlebar';
+import Input from '../../components/Input';
+import Output from '../../components/Output';
 import styles from './app.module.scss';
 
 const App = ({handleInput, handleSolve, isSolving}) => {
     return (
         <div className={styles.app}>
-            <div className={styles.header}>
-                <h1>Base Converter</h1>
-            </div>
-            <div className={styles.inputarea}>
-                <h2>Input</h2>
-                <textarea defaultValue='1011' />
-                        
+            <Titlebar />
+            <Input />
+            <BaseSelect />
+            <Output />
+        
 
-                {/* <BaseSelect /> */}
-                
+        {/* <div> */}
+            <Button>
+                Convert
+            </Button>
+        {/* </div> */}
 
-                <div id='cell-convert' class='cell'>
-                    <button id='btn-convert' ontouchstart=''>Convert</button>
-                </div>
-            </div>
+
         </div>
     );
 };

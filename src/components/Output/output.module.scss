@@ -1,0 +1,25 @@
+.outputarea {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+
+    // & > * {
+    //     border: solid .2em purple;
+    // }
+
+        h2 {
+            // border: solid .2em orange;
+            color: black;
+            font-size: 1.2em;
+            flex: none;
+        }
+
+        textarea {
+            background-color: white;
+            flex: 1;
+            font-size: 1em;
+            height: 100%;
+            width: 100%;
+        }
+    }

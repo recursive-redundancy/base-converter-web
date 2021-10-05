@@ -7,43 +7,13 @@
 
 body {
   background-color: #ece0be;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-}
-
-h1, 
-h2, 
-h3, 
-h4, 
-button,
-textarea {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: 1em;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1em;
 }
 
 #root {
   height: 100vh;
-  margin: auto;
-  max-width: 40em;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: .5em;
-  padding-bottom: .5em;
-  position: relative;
   width: 100vw;
-}
-
-
-
-h1 {
-  font-size: 1.5em;
-  font-weight: 900;
-}
-
-h2 {
-  font-size: 1em;
-  padding-bottom: 2em;
-  padding-top: .2em;
 }
