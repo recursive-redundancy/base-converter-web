@@ -1,4 +1,6 @@
 import React from 'react';
+// import BaseSelect from '../../components/BaseSelect';
+import Button from '../../components/Button';
 import styles from './app.module.scss';
 
 const App = ({handleInput, handleSolve, isSolving}) => {
@@ -9,27 +11,11 @@ const App = ({handleInput, handleSolve, isSolving}) => {
             </div>
             <div className={styles.inputarea}>
                 <h2>Input</h2>
-                <textarea>1011</textarea>
+                <textarea defaultValue='1011' />
                         
-                <div>
-                    <h2>From Base</h2>
-                </div>
-                <select>
-                <option value='bin' selected>Binary</option>
-                <option value='oct'>Octal</option>
-                <option value='dec'>Decimal</option>
-                <option value='hex'>Hex</option>
-                </select>
 
-                <div>
-                    <h2>To Base</h2>
-                </div>
-                <select>
-                    <option value='bin'>Binary</option>
-                    <option value='oct'>Octal</option>
-                    <option value='dec' selected>Decimal</option>
-                    <option value='hex'>Hex</option>
-                </select>
+                {/* <BaseSelect /> */}
+                
 
                 <div id='cell-convert' class='cell'>
                     <button id='btn-convert' ontouchstart=''>Convert</button>

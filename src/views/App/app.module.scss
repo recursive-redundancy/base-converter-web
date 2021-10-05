@@ -4,14 +4,28 @@
     flex-direction: column;
     min-height: 100%;
 
+    & > * {
+      border: solid .2em yellow;
+    }
+
     .header {
         border: solid .2em orange;
+        height: fit-content;
         font-size: 1em;
         padding-top: .5em;
         padding-bottom: .5em;
     }
 
     .inputarea {
+      display: flex;
+      flex-direction: column;
+
+      flex: 1;
+
+      & > * {
+        border: solid .2em purple;
+      }
+
         h2 {
             color: black;
             font-size: 1.2em;
