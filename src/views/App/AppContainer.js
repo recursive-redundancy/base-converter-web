@@ -41,7 +41,7 @@ const AppContainer = () => {
 
   const setRootHeight = () => {
     setTimeout(() => {
-        document.getElementById('root').style.height = `${window.innerHeight}px`;
+        document.getElementById('root').style.minHeight = `${window.innerHeight}px`;
     }, 0);
   };
 

@@ -14,6 +14,9 @@ body {
 }
 
 #root {
+  // border: solid 1em red;
+  padding: 1em;
+  height: fit-content;
   height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
 }

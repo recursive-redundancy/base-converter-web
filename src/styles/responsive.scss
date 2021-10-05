@@ -36,4 +36,6 @@
 html {
   font-size: 5vm;
   font-size: 5vmin;
+  // font-size: clamp(1px, 5vm, 160px);
+  font-size: clamp(6px, 5vmin, 40px);
 }

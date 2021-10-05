@@ -2,11 +2,9 @@
   // border: solid .2em red;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
-
   margin: auto;
-  max-width: 40em;
-  padding: 1em;
+  min-height: 100%;
+  max-width: 30em;
   position: relative;
 
   & > * {
@@ -25,13 +23,17 @@
   }
 
   input, 
-  textarea {
+  textarea,
+  select {
+    background-color: white;
     font-size: 1.2em;
   }
 
+  textarea {
+    min-height: 4em;
+  }
+
   .convertbutton {
-    align-self: flex-end;
-    // font-family: 'Anton', sans-serif;
     flex: none;
     font-size: 1.4em;
     font-weight: 600;

@@ -13,15 +13,9 @@ const App = ({handleInput, handleSolve, isSolving}) => {
             <Input />
             <BaseSelect />
             <Output />
-        
-
-        {/* <div> */}
             <Button className={styles.convertbutton}>
                 Convert
             </Button>
-        {/* </div> */}
-
-
         </div>
     );
 };
