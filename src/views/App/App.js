@@ -16,7 +16,7 @@ const App = ({handleInput, handleSolve, isSolving}) => {
         
 
         {/* <div> */}
-            <Button>
+            <Button className={styles.convertbutton}>
                 Convert
             </Button>
         {/* </div> */}
@@ -27,24 +27,3 @@ const App = ({handleInput, handleSolve, isSolving}) => {
 };
 
 export default App;
-
-
-
-
-//     </div>
-// </div>
-// </div>
-// </div>
-
-// <div class='row label'>
-// <div class='cell label'>
-// <h2>Output</h2>
-// </div>
-// </div>
-// <div class='row text'>
-// <div class='cell in-out'>
-// <div class='wrap-text'>
-//     <textarea id='txt-output' class='txt-base'></textarea>
-// </div>
-// </div>
-// </div>

@@ -29,4 +29,17 @@
     font-size: 1.2em;
   }
 
+  .convertbutton {
+    align-self: flex-end;
+    // font-family: 'Anton', sans-serif;
+    flex: none;
+    font-size: 1.4em;
+    font-weight: 600;
+    letter-spacing: -.05em;
+    line-height: 1em;
+    padding: .25em;
+    padding-left: .5em;
+    padding-right: .5em;
+    width: 100%;
+  } 
 }
