@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './load-spinner.module.scss';
 
-const LoadSpinner = ({className, label = "loading..."}) => {
+const LoadSpinner = ({className, label = "loading"}) => {
     return (
         <div className={[styles.spinner,className].join(' ')}>
             <h1 className={styles.label}>{label}</h1>
