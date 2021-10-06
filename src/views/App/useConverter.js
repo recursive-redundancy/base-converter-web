@@ -4,7 +4,7 @@ const useConverter = (defaultIsConverting) => {
     const [isConverting, setIsConverting] = useState(false);
     const [solution, setSolution] = useState('');
 
-    const handleConvert = (value) => {
+    const handleConvert = (value, fromBase, toBase) => {
         setIsConverting(true);
         import('../../js/doConversion').then(({doConversion}) => {
             doConversion();            
