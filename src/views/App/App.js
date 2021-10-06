@@ -10,6 +10,7 @@ import useConverter from './useConverter';
 import useInput from '../../components/Input/useInput';
 import styles from './app.module.scss';
 import { useEffect } from 'react/cjs/react.development';
+import useResizeRoot from './useResizeRoot';
 
 const defaultInput = '1011',
       defaultOutput = '13';
@@ -18,6 +19,7 @@ const App = () => {
     const {fromBase, toBase, handleFromBaseChange, handleToBaseChange} = useBases('bin', 'dec');
     const {isConverting, handleConvert, solution} = useConverter(false);
     const {input, handleInputChange} = useInput(defaultInput);
+    const {resizer} = useResizeRoot();
         
     return (
         <div className={styles.app}>
