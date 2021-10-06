@@ -1,13 +1,10 @@
-
-/*
-* Main module
-* The entry point for the base convert application
-* contains UI/View logic
-*/
-
 import base from 'dpm-base';
 
-console.log('well, hello there');
+const doConversion = () => {
+    console.log('doConversion');
+};
+
+export {doConversion};
 
 // /*
 // * Keys value set when selections are made for to and from bases

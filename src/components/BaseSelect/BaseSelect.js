@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './baseselect.module.scss';
 
-const BaseSelect = () => {
+const BaseSelect = ({handleChange}) => {
     return (
         <div className={styles.baseselect}>
             <div>

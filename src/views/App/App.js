@@ -5,37 +5,31 @@ import Input from '../../components/Input';
 import LoadSpinner from '../../components/LoadSpinner';
 import Output from '../../components/Output';
 import Titlebar from '../../components/Titlebar';
-import useConvert from './useConvert';
+import useConverter from './useConverter';
 import useInput from '../../components/Input/useInput';
-import useOutput from '../../components/Output/useOutput';
 import styles from './app.module.scss';
+import { useEffect } from 'react/cjs/react.development';
 
+const defaultInput = '1011',
+      defaultOutput = '13';
 
-const App = ({handleInput, handleSolve, isSolving}) => {
-    const [isConverting, handleConvert] = useConvert(false);
-    const [input, changeInput] = useInput('hi');
-    const [output, changeOutput] = useOutput('hi');
+const App = () => {
+    const {isConverting, handleConvert, solution} = useConverter(false);
+    const {input, handleInputChange} = useInput(defaultInput);
         
     return (
         <div className={styles.app}>
             <Titlebar />
-            <Input changeInput={changeInput} />
+            <Input defaultValue={defaultInput} handleInputChange={handleInputChange} />
             <BaseSelect />
-            {(()=>{
-                if (isConverting) {
-                    return(
-                        <LoadSpinner label='converting' />
-                    );
-                }
-                return(
-                    <>
-                    <Output />
-              
-                    </>
-                );
-            })()
+            {
+            (isConverting) 
+            ?
+                <LoadSpinner label='converting' />
+            :
+                <Output value={solution} />
             }
-            <Button className={styles.convertbutton} onClick={handleConvert}>
+            <Button className={styles.convertbutton} onClick={()=>{handleConvert(input)}}>
                 Convert
             </Button>
         </div>
