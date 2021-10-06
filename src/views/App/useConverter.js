@@ -7,11 +7,11 @@ const useConverter = (defaultIsConverting) => {
     const handleConvert = (value, fromBase, toBase) => {
         setIsConverting(true);
         import('../../js/doConversion').then(({doConversion}) => {
-            doConversion();            
             setTimeout(() => { 
-                setSolution('dnai');
+                const result = doConversion(value, fromBase, toBase);            
+                setSolution(result);
                 setIsConverting(false);
-            }, 2000);
+            }, 0);
         });
     };
 

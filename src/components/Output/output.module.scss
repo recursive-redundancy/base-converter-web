@@ -4,10 +4,6 @@
 
     flex: 1;
 
-    // & > * {
-    //     border: solid .2em purple;
-    // }
-
         h2 {
             // border: solid .2em orange;
             color: black;
@@ -16,6 +12,7 @@
         }
 
         textarea {
+            // border: solid .2em orange;
             background-color: white;
             flex: 1;
             font-size: 1em;
