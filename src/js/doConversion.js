@@ -1,8 +1,6 @@
 import base from 'dpm-base';
 
 const doConversion = (value, fromBase, toBase) => {
-    console.log('doConversion');
-
     let mod = null,
       // the conversion function to perform
       conversion = null,
@@ -39,6 +37,10 @@ const doConversion = (value, fromBase, toBase) => {
       case 'hex':
         conversion = mod.toHex;
         break;
+    }
+
+    if (!validator(value)) {
+        return false;
     }
 
     const result = conversion(value);

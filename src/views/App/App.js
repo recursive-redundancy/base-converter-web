@@ -15,19 +15,19 @@ const defaultInput = '1011',
       defaultOutput = '13';
 
 const App = () => {
+    useResizeRoot();
     const {
         fromBase, toBase, handleFromBaseChange, handleToBaseChange
     } = useBases('bin', 'dec');
     const {isConverting, handleConvert, solution} = useConverter(false);
     const {input, handleInputChange} = useInput(defaultInput);
-    useResizeRoot();
         
     return (
         <div className={styles.app}>
             <Titlebar />
             <Input defaultValue={defaultInput} handleInputChange={handleInputChange} />
             <BaseSelect handleFromBaseChange={handleFromBaseChange} 
-                        handleToBaseChange={handleToBaseChange} />
+            handleToBaseChange={handleToBaseChange} />
             {
             (isConverting) 
             ?
@@ -36,7 +36,7 @@ const App = () => {
                 <Output value={solution} />
             }
             <Button className={styles.convertbutton} onClick={()=>{
-                handleConvert(input, fromBase, toBase)}}>
+            handleConvert(input, fromBase, toBase)}}>
                 Convert
             </Button>
         </div>

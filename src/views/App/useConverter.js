@@ -8,9 +8,13 @@ const useConverter = (defaultIsConverting) => {
         setIsConverting(true);
         import('../../js/doConversion').then(({doConversion}) => {
             setTimeout(() => { 
-                const result = doConversion(value, fromBase, toBase);            
-                setSolution(result);
+                const result = doConversion(value, fromBase, toBase);
                 setIsConverting(false);
+                if (!result) {
+                    setSolution('INVALID INPUT!');
+                    return;
+                };
+                setSolution(result);
             }, 0);
         });
     };
