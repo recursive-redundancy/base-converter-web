@@ -1,22 +1,13 @@
-import React, {useEffect, useState} from 'react';
+import React, { useLayoutEffect } from 'react';
+import { useResizeDetector } from 'react-resize-detector';
 
-const useResizeRoot = () => {
-    useEffect(() => {
-        const setRootHeight = () => {
-            setTimeout(() => {
-                document.getElementById('root').style.height = `${window.innerHeight}px`;
-            }, 0);
-        };
+const useResizeRoot = (groundRef, snakeRef) => {
+    const { width, height, ref } = useResizeDetector();
+    useLayoutEffect(() => {
+        document.getElementById('root').style.height = `${window.innerHeight}px`;
+    }, [width, height]);
 
-        setRootHeight();
-        window.addEventListener('resize', setRootHeight);
-        
-        return(() => {
-            window.removeEventListener('resize', setRootHeight);
-        });
-    }, []);
-
-    return {};
+    return {ref};
 };
 
 export default useResizeRoot;

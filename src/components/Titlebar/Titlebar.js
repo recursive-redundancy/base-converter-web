@@ -3,7 +3,7 @@ import styles from './titlebar.module.scss';
 
 const Titlebar = () => {
     return(
-        <div className={styles.header}>
+        <div className={styles.titlebar}>
             <h1>Base Converter</h1>
         </div>
     );

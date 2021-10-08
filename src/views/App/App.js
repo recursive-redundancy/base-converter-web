@@ -15,7 +15,7 @@ const defaultInput = '1011',
       defaultOutput = '13';
 
 const App = () => {
-    useResizeRoot();
+    const {ref} = useResizeRoot();
     const {
         fromBase, toBase, handleFromBaseChange, handleToBaseChange
     } = useBases('bin', 'dec');
@@ -23,7 +23,7 @@ const App = () => {
     const {input, handleInputChange} = useInput(defaultInput);
         
     return (
-        <div className={styles.app}>
+        <div className={styles.app} ref={ref}>
             <Titlebar />
             <Input defaultValue={defaultInput} handleInputChange={handleInputChange} />
             <BaseSelect handleFromBaseChange={handleFromBaseChange} 

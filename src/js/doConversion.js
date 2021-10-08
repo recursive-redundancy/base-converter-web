@@ -1,6 +1,6 @@
 import base from 'dpm-base';
 
-const doConversion = (value, fromBase, toBase) => {
+async function doConversion (value, fromBase, toBase) {
     let mod = null,
       // the conversion function to perform
       conversion = null,
@@ -43,9 +43,10 @@ const doConversion = (value, fromBase, toBase) => {
         return false;
     }
 
-    const result = conversion(value);
-
-    return result;
+    return await new Promise((res, rej) => {
+      const result = conversion(value);
+      return res(result);
+    });
 };
 
 export {doConversion};
